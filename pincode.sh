@@ -1,13 +1,13 @@
 #!/bin/bash -x
 shopt -s extglob
-echo "enter a word ending with thing"
+echo "enter the pincode"
 read word
-p=^[0-9]{6}$
-if [[ $word =~ $p ]]
+p1="^[0-9]{6}|[0-9]{3}[ ][0-9]{3}$"
+if [[ $word =~ $p1 ]]
 then
-        echo valid
+        echo "valid"
 else
-        echo invalid
+        echo "invalid"
 fi
 
 
